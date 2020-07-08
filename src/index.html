@@ -3,44 +3,109 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Webpack Starter Kit</title>
-
-    <!-- Don't forget to delete this style tag. -->
-    <style>
-      body {
-        min-height: 100vh;
-        margin: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .intro {
-        text-align: center;
-      }
-
-      .intro h1 {
-        margin-top: 0;
-        font-weight: 500;
-        font-size: 40px;
-      }
-
-      .intro img {
-        display: block;
-        max-width: 100%;
-        height: auto;
-      }
-    </style>
+    <title>Document</title>
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="search.css" />
+    <!-- <link rel="stylesheet" href="favourite.css" /> -->
+    <link rel="stylesheet" href="quote.css" />
+    <link rel="stylesheet" href="wInfo.css" />
+    <link rel="stylesheet" href="data.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="fonts.css" />
   </head>
-
   <body>
-    <article class="intro">
-      <h1>Webpack starter kit</h1>
+    <div id="wrapper-body" style="display: block;">
+      <div class="container">
+        <div class="input-form">
+          <form class="search__form" id="search-form">
+            <input
+              id="search-input"
+              type="text"
+              value=""
+              name="city"
+              placeholder="Enter the city"
+            />
+          </form>
+        </div>
 
-      <!-- HTML image reference example. -->
-      <img src="./images/intro.png" alt="" width="640" />
-    </article>
+        <div class="none-pageOne">
+          <div class="weather-info" id="weather-info-today-init">
+            <div class="weather-today-wrapper">
+              <h3 class="current-city-name">Kiev,UA</h3>
+              <div class="today-temperature">
+                <div class="current-temperature">
+                  <div class="today-current-temperature"></div>
+                  <sup class="degree-symbol">&deg;</sup>
+                </div>
+                <div class="minimax-block">
+                  <div class="today-min-temperature minimax">
+                    <span>min</span>
+                    <div>
+                      <p id="today-min"></p>
+                      &deg;
+                    </div>
+                  </div>
+                  <div class="minimax-devider"></div>
+                  <div class="today-max-temperature minimax">
+                    <span>max</span>
+                    <div>
+                      <p id="today-max"></p>
+                      &deg;
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="show-today-or-5-days-buttons">
+              <button
+                class="weather-button weather-today weather-button-active"
+              >
+                today
+              </button>
+              <button class="weather-button five-days weather-button-unactive">
+                5 days
+              </button>
+            </div>
+          </div>
+
+          <div class="data">
+            <p class="data__day">13 Mon</p>
+            <div class="data__wrapper">
+              <div class="data__day--month">
+                <span class="month">July</span>
+                <span class="time">21:30:56</span>
+              </div>
+              <div class="data__sun">
+                <div class="sunrise">
+                  <img
+                    src="./assets/icons/data__sunrise--sunset/dawn.svg"
+                    alt="sunrise"
+                    class="sunrise__icon"
+                  />
+                  <span class="sunrise__time">05:04</span>
+                </div>
+                <div class="twilight">
+                  <img
+                    src="./assets/icons/data__sunrise--sunset/sunset.svg"
+                    alt="sunset"
+                    class="twilight__icon"
+                  />
+                  <span class="twilight__time">20:50</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="quote">
+            <blockquote class="quote__block">
+              <p class="quote__text"></p>
+              <cite class="quote__author"></cite>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
   </body>
 </html>
-<!---- привет-->
